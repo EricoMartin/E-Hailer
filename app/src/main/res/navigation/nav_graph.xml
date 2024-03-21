@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/onBoard1Fragment">
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.basebox.ehailerrider.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" >
+        <action
+            android:id="@+id/action_mapFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_mapFragment_to_driverListFragment"
+            app:destination="@id/driverListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoard2Fragment"
+        android:name="com.basebox.ehailerrider.OnBoard2Fragment"
+        android:label="fragment_on_board2"
+        tools:layout="@layout/fragment_on_board2">
+        <action
+            android:id="@+id/action_onBoard2Fragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoard1Fragment"
+        android:name="com.basebox.ehailerrider.OnBoard1Fragment"
+        android:label="fragment_on_board1"
+        tools:layout="@layout/fragment_on_board1">
+        <action
+            android:id="@+id/action_onBoard1Fragment_to_onBoard2Fragment"
+            app:destination="@id/onBoard2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.basebox.ehailerrider.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.basebox.ehailerrider.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/driverListFragment"
+        android:name="com.basebox.ehailerrider.DriverListFragment"
+        android:label="fragment_driver_list"
+        tools:layout="@layout/fragment_driver_list" >
+        <action
+            android:id="@+id/action_driverListFragment_to_tripStartedFragment"
+            app:destination="@id/tripStartedFragment" />
+        <action
+            android:id="@+id/action_driverListFragment_to_awaitingDriverFragment"
+            app:destination="@id/awaitingDriverFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tripStartedFragment"
+        android:name="com.basebox.ehailerrider.TripStartedFragment"
+        android:label="fragment_trip_started"
+        tools:layout="@layout/fragment_trip_started" >
+        <action
+            android:id="@+id/action_tripStartedFragment_to_tripFinishedFragment"
+            app:destination="@id/tripFinishedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tripFinishedFragment"
+        android:name="com.basebox.ehailerrider.TripFinishedFragment"
+        android:label="fragment_trip_finished"
+        tools:layout="@layout/fragment_trip_finished" />
+    <fragment
+        android:id="@+id/awaitingDriverFragment"
+        android:name="com.basebox.ehailerrider.AwaitingDriverFragment"
+        android:label="fragment_awaiting_driver"
+        tools:layout="@layout/fragment_awaiting_driver" />
+</navigation>

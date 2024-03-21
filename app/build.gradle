@@ -1,0 +1,125 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
+    id 'kotlin-kapt'
+    id 'kotlin-android'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'dagger.hilt.android.plugin'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
+}
+
+android {
+    namespace 'com.basebox.ehailerrider'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.basebox.ehailerrider"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures{
+        viewBinding = true
+        dataBinding = true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.9.20'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    //SplashScreen
+    implementation 'androidx.core:core-splashscreen:1.1.0-alpha02'
+    // Navigation
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.7.7'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.7.7'
+    // Feature module Support
+    implementation "androidx.navigation:navigation-dynamic-features-fragment:2.7.7"
+    // define a BOM and its version
+    implementation platform("com.squareup.okhttp3:okhttp-bom:4.12.0")
+
+    // define any required OkHttp artifacts without version
+    implementation 'com.squareup.okhttp3:okhttp'
+    implementation 'com.squareup.okhttp3:logging-interceptor'
+    // Google
+    implementation 'com.google.android.gms:play-services-maps:18.2.0'
+    implementation 'com.google.android.gms:play-services-auth:21.0.0'
+    implementation 'com.google.android.libraries.places:places:3.3.0'
+    // KTX for the Places SDK for Android library
+    implementation 'com.google.maps.android:places-ktx:3.1.1'
+    implementation 'androidx.room:room-common:2.6.1'
+    // Testing Navigation
+    androidTestImplementation "androidx.navigation:navigation-testing:2.7.7"
+    // Firebase
+    implementation platform('com.google.firebase:firebase-bom:32.7.4')
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-database'
+    implementation 'com.google.firebase:firebase-storage'
+    implementation 'com.google.firebase:firebase-appcheck-playintegrity:17.1.2'
+    implementation 'com.google.firebase:firebase-appcheck-debug:17.1.2'
+    // Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.3'
+    // Live Data & ViewModel
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.7.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0'
+    implementation 'androidx.preference:preference-ktx:1.2.1'
+    // HILT - Dependency Injection
+    implementation 'com.google.dagger:hilt-android:2.46.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.test.ext:junit-ktx:1.1.5'
+    kapt 'com.google.dagger:hilt-android-compiler:2.46.1'
+    kapt 'androidx.hilt:hilt-compiler:1.2.0'
+    // HILT - For instrumentation tests
+    androidTestImplementation 'com.google.dagger:hilt-android-testing:2.46.1'
+    kaptAndroidTest 'com.google.dagger:hilt-compiler:2.46.1'
+    // HILT - For local unit tests
+    testImplementation 'com.google.dagger:hilt-android-testing:2.46.1'
+    kaptTest 'com.google.dagger:hilt-compiler:2.46.1'
+    //Tests
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    // Room components
+    implementation "androidx.room:room-ktx:2.6.1"
+    kapt "androidx.room:room-compiler:2.6.1"
+    androidTestImplementation "androidx.room:room-testing:2.6.1"
+}
+
+secrets {
+    // Optionally specify a different file name containing your secrets.
+    // The plugin defaults to "local.properties"
+    propertiesFileName = "secrets.properties"
+
+    // A properties file containing default secret values. This file can be
+    // checked in version control.
+    defaultPropertiesFileName = "local.defaults.properties"
+
+    // Configure which keys should be ignored by the plugin by providing regular expressions.
+    // "sdk.dir" is ignored by default.
+    ignoreList.add("keyToIgnore") // Ignore the key "keyToIgnore"
+    ignoreList.add("sdk.*")       // Ignore all keys matching the regexp "sdk.*"
+}

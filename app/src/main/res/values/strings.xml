@@ -1,0 +1,243 @@
+<resources>
+    <string name="app_name">E Hailer Rider</string>
+    <string name="fill_the_info">Fill the Form to Get Started</string>
+    <string name="confirm_pass">Confirm Password</string>
+    <string name="skip">Skip</string>
+    <string name="login">Login</string>
+    <string name="sign_up_with_google">Sign up with Google</string>
+    <string name="sign_up">Sign up</string>
+    <string name="pass">Password</string>
+    <string name="todo">TO DO</string>
+    <string name="email">Email</string>
+    <string name="by_signing_up_you_agree_to_the_terms_of_service_and_privacy_policy">By signing up, you agree to the Terms of Service and Privacy Policy</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="log_in">Login</string>
+    <string name="welcome_back">Welcome</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="next">Next</string>
+    <string name="your_web_client_id">406189969626-i9m9n03k2bmu44ua118m0fmeahlrur5v.apps.googleusercontent.com</string>
+    <string name="let_s_go">Let\'s Go</string>
+    <string name="go">Go</string>
+    <string name="going_out">Stepping out? Why not Ride with us?</string>
+    <string name="type_destination">Type Destination</string>
+    <string name="new_json">
+    [
+  {
+    "featureType": "administrative.locality",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#54a503"
+      }
+    ]
+  },
+  {
+    "featureType": "landscape",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "visibility": "simplified"
+      }
+    ]
+  },
+  {
+    "featureType": "landscape.man_made",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#0034d1"
+      }
+    ]
+  },
+  {
+    "featureType": "landscape.natural",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#0317aa"
+      }
+    ]
+  },
+  {
+    "featureType": "landscape.natural.landcover",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#ffbb00"
+      }
+    ]
+  },
+  {
+    "featureType": "landscape.natural.terrain",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#002aff"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.business",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#54a503"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.business",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#a30535"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.government",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#c41003"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.medical",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#c41003"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.place_of_worship",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#5ac403"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.sports_complex",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#5ac403"
+      }
+    ]
+  },
+  {
+    "featureType": "road.arterial",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#fad000"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "stylers": [
+      {
+        "color": "#fad000"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#fad000"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#fa6400"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway.controlled_access",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#d13f00"
+      }
+    ]
+  },
+  {
+    "featureType": "road.local",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#ffbb00"
+      }
+    ]
+  },
+  {
+    "featureType": "road.local",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#0300d1"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.station.airport",
+    "stylers": [
+      {
+        "color": "#ffdd00"
+      },
+      {
+        "visibility": "on"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.station.rail",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#5621e8"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "stylers": [
+      {
+        "color": "#2188e8"
+      }
+    ]
+  }
+]
+    </string>
+    <string name="type_pick_up_location">Type Pick-up Location</string>
+    <string name="select_current_location">Select Current Location</string>
+    <string name="destination_address">Destination Address</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="logout">Logout</string>
+    <string name="home">Home\n</string>
+    <string name="profile">Profile</string>
+    <string name="resume">Resume</string>
+    <string name="trips">Trips</string>
+    <string name="username">username</string>
+    <string name="driver_mode">Driver Mode</string>
+    <string name="registration_number">Registration Number</string>
+    <string name="vehicle_make">Vehicle Make</string>
+    <string name="driver_name">Driver Name</string>
+    <string name="your_driver_coming">Your Driver is Coming</string>
+  <string name="cancel">Cancel</string>
+  <string name="call_driver">Call Driver</string>
+</resources>

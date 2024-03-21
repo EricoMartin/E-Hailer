@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:id="@+id/nav_header"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:gravity="bottom"
+    android:padding="16dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:focusable="true">
+
+    <ImageView
+        android:layout_gravity="center"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/my_pic"
+        android:id="@+id/nav_img"/>
+
+    <TextView
+        android:id="@+id/nav_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/username"
+        android:textColor="@color/purple_200"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+
+</LinearLayout>

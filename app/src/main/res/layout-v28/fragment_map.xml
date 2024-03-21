@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MapFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/card"
+            tools:layout="@layout/places_autocomplete_fragment" />
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/purple_200"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            android:padding="4dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="8dp"
+                android:paddingBottom="8dp">
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/mdiv1"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    app:dividerColor="@color/purple_500"/>
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/going_out"
+                    android:textColor="@color/purple_500"
+                    android:layout_marginTop="8dp"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="8dp"/>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/outlinedEmail2"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/tv1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:hint="@string/type_pick_up_location"
+                    android:textColorHint="@color/purple_500"
+                    app:boxStrokeColor="@color/purple_500"
+                    app:boxStrokeWidth="2dp"
+                    app:hintTextColor="@color/purple_500"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:cornerRadius="8dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextEmail2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textAutoComplete"
+                        android:textColor="@color/purple_500" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <CheckBox
+                    android:id="@+id/txt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/outlinedEmail2"
+                    android:buttonTint="@color/purple_500"
+                    android:text="@string/select_current_location"
+                    android:textColor="@color/purple_500" />
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:id="@+id/outlinedEmail"-->
+<!--                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_below="@id/txt1"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:layout_marginEnd="16dp"-->
+<!--                    android:layout_marginBottom="16dp"-->
+<!--                    android:hint="@string/type_destination"-->
+<!--                    android:textColorHint="@color/purple_500"-->
+<!--                    app:boxStrokeColor="@color/purple_500"-->
+<!--                    app:boxStrokeWidth="2dp"-->
+<!--                    app:hintTextColor="@color/purple_500"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:cornerRadius="8dp">-->
+
+<!--                    <com.google.android.material.textfield.MaterialAutoCompleteTextView-->
+<!--                        android:id="@+id/editTextEmail"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="48dp"-->
+<!--                        android:paddingStart="16dp"-->
+<!--                        android:paddingEnd="16dp"-->
+<!--                        android:ems="10"-->
+<!--                        android:inputType="textAutoComplete"-->
+<!--                        android:textColor="@color/purple_500" />-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/autocomplete_fragment"
+                    android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt1"
+                    android:outlineSpotShadowColor="@color/purple_500"
+                    android:textColor="@color/purple_500"
+                    android:layout_marginTop="8dp"
+                    tools:layout="@layout/places_autocomplete_fragment" />
+                <TextView
+                    android:id="@+id/autocomplete_response_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:textColor="@color/purple_500"
+                    android:layout_below="@id/autocomplete_fragment"
+                    android:textIsSelectable="true"
+                    android:contentDescription="@string/destination_address"/>
+                <Button
+                    android:id="@+id/btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/purple_500"
+                    android:textColor="@color/purple_200"
+                    android:layout_below="@id/autocomplete_response_content"
+                    android:text="@string/go"/>
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/materialToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@android:color/transparent"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/imageDots"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="24dp"
+                    android:foregroundGravity="fill"
+                    android:src="@drawable/ic_dots"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/baseline_blur_circular_24" />
+
+                <Button
+                    android:id="@+id/toggleButton"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:backgroundTint="@color/purple_500"
+                    android:text="@string/driver_mode"
+                    android:textColor="@color/purple_200"/>
+            </RelativeLayout>
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "406189969626",
+    "project_id": "e-hailer",
+    "storage_bucket": "e-hailer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:406189969626:android:1e5bb9d113fd7b445055e3",
+        "android_client_info": {
+          "package_name": "com.basebox.ehailerrider"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "406189969626-s20im3ohjhc632f5fpjq7jj5m01146do.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.basebox.ehailerrider",
+            "certificate_hash": "ab1e4e52ad3310158275b7626a34603fa4dbb023"
+          }
+        },
+        {
+          "client_id": "406189969626-i9m9n03k2bmu44ua118m0fmeahlrur5v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAb8tmjCRL1Dbwj3xeu3diFzaRDK8KeMG8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "406189969626-i9m9n03k2bmu44ua118m0fmeahlrur5v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
